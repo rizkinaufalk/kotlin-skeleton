@@ -1,0 +1,145 @@
+[versions]
+
+#App Configuration
+minSdk                          = "24"
+targetSdk                       = "33"
+compileSdk                      = "33"
+versionCode                     = "1"
+versionName                     = "0.0.1"
+
+#Lib
+kotlinVersion                   = "1.9.0"
+agp = "8.1.1"
+
+activityKtx                     = "1.8.2"
+retrofitVersion                 = "2.9.0"
+okhttpVersion                   = "4.11.0"
+gsonVersion                     = "2.10.1"
+moshiVersion                    = "1.15.1"
+androidAnnotationsVersion       = "28.0.0"
+glideVersion                    = "4.16.0"
+workRunTimeVersion              = "2.9.0"
+lottieVersion                   = "6.1.0"
+shimmerVersion                  = "0.5.0"
+roomKtxVersion                  = "2.6.1"
+multidexVersion                 = "2.0.1"
+facebookSdkVersion              = "13.2.0"
+expandLayout                    = "2.9.2"
+
+#androidX
+constraintVersion               = "2.1.4"
+legacySupportVersion            = "1.0.0"
+coreVersion                     = "1.12.0"
+coreTestVersion                 = "2.1.0"
+pagingVersion                   = "3.2.1"
+roomVersion                     = "2.6.1"
+liveDataVersion                 = "2.7.0"
+lifecycleVersion                = "2.7.0"
+lifeCycleArchVersion            = "1.1.1"
+navVersion                      = "2.7.7"
+coroutinesVersion               = "1.7.3"
+coroutinesTestVersion           = "1.3.7"
+fragmentVersion                 = "1.6.2"
+fragmentTestVersion             = "1.4.0"
+hilt                            = "2.45"
+recyclerViewVersion             = "1.3.2"
+viewpager2Version               = "1.0.0"
+swipeRefreshLayoutVersion       = "1.1.0"
+materialVersion                 = "1.11.0"
+cardViewVersion                 = "1.0.0"
+appCompatVersion                = "1.6.1"
+flexboxVersion                  = "3.0.0"
+browserVersion                  = "1.8.0"
+fixHeaderTableVersion           = "0.0.0.5"
+
+#logs
+chuckerVersion                  = "4.0.0"
+timberVersion                   = "5.0.1"
+
+#view pager
+viewPagerVersion                = "1.0.0"
+
+[libraries]
+
+
+kotlinStdLib             = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlinVersion" }
+timber                   = { group = "com.jakewharton.timber", name = "timber", version.ref = "timberVersion" }
+chuckerLib               = { group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chuckerVersion" }
+chuckerNoOp              = { group = "com.github.chuckerteam.chucker", name = "library-no-op", version.ref = "chuckerVersion" }
+retrofitLib              = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion" }
+retrofitRx               = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "retrofitVersion" }
+retrofitGson             = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion" }
+retrofitMoshi            = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofitVersion" }
+okhttpLib                = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttpVersion" }
+okhttpLogging            = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttpVersion" }
+moshiConverter           = { group = "com.squareup.moshi", name = "moshi", version.ref = "moshiVersion" }
+androidAnnotations       = { group = "com.android.support", name = "support-annotations", version.ref = "androidAnnotationsVersion" }
+glide                    = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glideVersion" }
+glideCompiler            = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glideVersion" }
+hiltAndroid              = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hiltCompilerAndroid      = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+lottie                   = { group = "com.airbnb.android", name = "lottie", version.ref = "lottieVersion" }
+shimmer                  = { group = "com.facebook.shimmer", name = "shimmer", version.ref = "shimmerVersion" }
+workRunTime              = { group = "androidx.work", name = "work-runtime", version.ref = "workRunTimeVersion" }
+multidex                 = { group = "androidx.multidex", name = "multidex", version.ref = "multidexVersion" }
+facebookSdk              = { group = "com.facebook.android", name = "facebook-android-sdk", version.ref = "facebookSdkVersion" }
+gifDrawable              = { group = "pl.droidsonroids.gif", name = "android-gif-drawable", version = "1.2.24" }
+spinKitView              = { group = "com.github.ybq", name = "Android-SpinKit", version = "1.4.0" }
+easyPermisson            = { group = "pub.devrel", name = "easypermissions", version = "3.0.0" }
+coil                     = { group = "io.coil-kt", name = "coil", version = "2.0.0" }
+photoView                = { group = "com.github.chrisbanes", name = "PhotoView", version = "2.3.0" }
+securePref               = { group = "com.scottyab", name = "secure-preferences-lib", version = "0.1.7" }
+jodaTime                 = { group = "joda-time", name = "joda-time", version = "2.10.6" }
+expandLayout             = { group = "com.github.cachapa", name = "ExpandableLayout", version.ref = "expandLayout" }
+hawk                     = { group = "com.orhanobut", name = "hawk", version = "2.0.1" }
+chart                    = { group = "com.github.lecho", name = "hellocharts-library", version = "1.5.8@aar" }
+viewpager                = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "viewPagerVersion" }
+monthAndYearPicker       = { group = "io.github.dzmitry-lakisau", name = "month-year-picker-dialog", version = "1.0.0" }
+stockChart               = { group = "com.github.PhilJay", name = "MPAndroidChart", version = "v3.1.0" }
+fixheadertable           = { group = "com.github.Zardozz", name = "fixedheadertablelayout", version.ref = "fixHeaderTableVersion" }
+
+#Support
+material             = { group = "com.google.android.material", name = "material", version.ref = "materialVersion" }
+appcompat            = { group = "androidx.appcompat", name = "appcompat", version.ref = "appCompatVersion" }
+fragment             = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentVersion" }
+cardview             = { group = "androidx.cardview", name = "cardview", version.ref = "cardViewVersion" }
+constraint           = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintVersion" }
+recyclerview         = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerViewVersion" }
+viewpager2           = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "viewpager2Version" }
+support              = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportVersion" }
+swiperefreshlayout   = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swipeRefreshLayoutVersion" }
+kotlinextensions     = { group = "org.jetbrains.kotlin", name = "kotlin-android-extensions-runtime", version.ref = "kotlinVersion" }
+core                 = { group = "androidx.core", name = "core-ktx", version.ref = "coreVersion" }
+roomCompiler         = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
+roomRuntime          = { group = "androidx.room", name = "room-runtime", version.ref = "roomVersion" }
+roomCommon           = { group = "androidx.room", name = "room-common", version.ref = "roomVersion" }
+roomKtx              = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtxVersion" }
+paging               = { group = "androidx.paging", name = "paging-runtime", version.ref = "pagingVersion" }
+liveData             = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "liveDataVersion" }
+lifecycle            = { group = "android.arch.lifecycle", name = "extensions", version.ref = "lifeCycleArchVersion" }
+lifecycleVM          = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
+lifecycleVMSavedState= { group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref = "lifecycleVersion" }
+navigationFragment   = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navVersion" }
+navigationUi         = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navVersion" }
+coroutines           = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutinesVersion" }
+coroutinesCore       = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutinesVersion" }
+coroutinesPlay       = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "coroutinesVersion" }
+activityKtx          = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
+browser              = { group = "androidx.browser", name = "browser", version.ref = "browserVersion" }
+flexbox              = { group = "com.google.android.flexbox", name = "flexbox", version.ref = "flexboxVersion" }
+
+
+[bundles]
+retrofit = ["retrofitLib", "retrofitMoshi", "retrofitRx", "moshiConverter"]
+logs = ["timber", "chuckerLib", "chuckerNoOp"]
+okhttp = ["okhttpLib", "okhttpLogging"]
+room = ["roomCompiler", "roomRuntime", "roomCommon", "roomKtx"]
+androidX = ["core", "material", "support", "appcompat", "fragment", "constraint", "cardview", "recyclerview", "viewpager2", "swiperefreshlayout"]
+navigation = ["navigationUi", "navigationFragment"]
+coroutine = ["coroutines", "coroutinesCore", "coroutinesPlay"]
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
+kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlinVersion" }
