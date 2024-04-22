@@ -1,10 +1,10 @@
-package id.co.kalacakra.bcas.app.domain
+package com.example.myproject.app.domain
 
-import id.co.kalacakra.bcas.app.domain.subscribers.FailureData
-import id.co.kalacakra.bcas.app.domain.subscribers.Resource
-import id.co.kalacakra.bcas.ext.constant.NetworkCodes
-import id.co.kalacakra.bcas.ext.exeption.ForbiddenException
-import id.co.kalacakra.bcas.ext.exeption.NoNetworkException
+import com.example.myproject.app.domain.subscribers.FailureData
+import com.example.myproject.app.domain.subscribers.Resource
+import com.example.myproject.ext.constant.NetworkCodes
+import com.example.myproject.ext.exception.ForbiddenException
+import com.example.myproject.ext.exception.NoNetworkException
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch

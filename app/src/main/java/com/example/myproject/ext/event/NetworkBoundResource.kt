@@ -1,13 +1,13 @@
 package id.co.kalacakra.bcas.ext.event
 
-import id.co.kalacakra.bcas.app.domain.ResultWrapper
-import id.co.kalacakra.bcas.app.domain.safeApiCall
-import id.co.kalacakra.bcas.app.domain.subscribers.DataSource
-import id.co.kalacakra.bcas.app.domain.subscribers.FailureData
-import id.co.kalacakra.bcas.app.domain.subscribers.Resource
-import id.co.kalacakra.bcas.ext.constant.NetworkCodes
-import id.co.kalacakra.bcas.ext.other.ErrorCodesMapper
-import id.co.kalacakra.bcas.ext.provider.SchedulerProvider
+import com.example.myproject.app.domain.ResultWrapper
+import com.example.myproject.app.domain.safeApiCall
+import com.example.myproject.app.domain.subscribers.DataSource
+import com.example.myproject.app.domain.subscribers.FailureData
+import com.example.myproject.app.domain.subscribers.Resource
+import com.example.myproject.ext.constant.NetworkCodes
+import com.example.myproject.ext.other.ErrorCodesMapper
+import com.example.myproject.ext.provider.SchedulerProvider
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.*
 
@@ -49,7 +49,8 @@ inline fun <ResultType, RequestType> networkBoundResource(
             }
 
             is ResultWrapper.GenericError -> {
-                emit(Resource.Failure(
+                emit(
+                    Resource.Failure(
                     failureData = FailureData(fetchResult.code, fetchResult.message) )
                 )
             }
@@ -66,7 +67,8 @@ inline fun <ResultType, RequestType> networkBoundResource(
     // emit(Resource.loading(null))
 
 }.catch { exception ->
-    emit(Resource.Failure(
+    emit(
+        Resource.Failure(
         failureData = FailureData(NetworkCodes.GENERIC_ERROR, "An error occurred while fetching data! $exception") )
     )
 
@@ -99,7 +101,8 @@ abstract class NetworkBoundResource<ResultType, RequestType>(
                 }
 
                 is ResultWrapper.GenericError -> {
-                    emit(Resource.Failure(
+                    emit(
+                        Resource.Failure(
                         failureData = FailureData(remoteResponse.code, remoteResponse.message) )
                     )
                 }
@@ -145,7 +148,8 @@ abstract class NetworkBoundResources<T>(
                 }
 
                 is ResultWrapper.GenericError -> {
-                    emit(Resource.Failure(
+                    emit(
+                        Resource.Failure(
                         failureData = FailureData(remoteResponse.code, remoteResponse.message) )
                     )
                 }
@@ -166,7 +170,7 @@ abstract class NetworkBoundResources<T>(
 
 /*import androidx.annotation.MainThread
 import androidx.annotation.WorkerThread
-import id.co.kalacakra.bcas.app.domain.subscribers.Resource
+import com.example.myproject.app.domain.subscribers.Resource
 import io.reactivex.Flowable
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers

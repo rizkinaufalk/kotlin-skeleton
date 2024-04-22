@@ -1,4 +1,4 @@
-package id.co.kalacakra.bcas.app.domain.subscribers
+package com.example.myproject.app.domain.subscribers
 
 /**
  * A wrapper for database and network states.

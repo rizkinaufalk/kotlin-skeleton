@@ -1,4 +1,4 @@
-package id.co.kalacakra.bcas.app.domain.subscribers
+package com.example.myproject.app.domain.subscribers
 
 enum class Status {
     SUCCESS,

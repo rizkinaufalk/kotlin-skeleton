@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
+    id("com.google.devtools.ksp")
     id("org.jetbrains.kotlin.android")
 }
 
@@ -27,7 +29,6 @@ android {
 
     buildFeatures {
         dataBinding = true
-        viewBinding = true
     }
 
     buildTypes {
@@ -40,11 +41,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
     externalNativeBuild {
         cmake {
@@ -57,13 +58,27 @@ android {
 dependencies {
 
     implementation(libs.bundles.androidX)
-    implementation(libs.bundles.logs)
     implementation(libs.bundles.okhttp)
+
     implementation(libs.bundles.room)
+    ksp(libs.roomCompiler)
+
     implementation(libs.bundles.retrofit)
     implementation(libs.bundles.navigation)
 
+    //GLide
+    implementation(libs.glide)
+    ksp(libs.glideCompiler)
+    annotationProcessor(libs.glideCompiler)
+
+    // logs
+    debugImplementation(libs.chuckerLib)
+//    releaseImplementation(libs.chuckerNoOp)
+    implementation(libs.timber)
+
     implementation(libs.hiltAndroid)
+    implementation(libs.liveData)
+    implementation(libs.lifecycleVM)
     kapt(libs.hiltCompilerAndroid)
 
     implementation(libs.lottie)

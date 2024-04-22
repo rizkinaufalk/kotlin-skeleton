@@ -5,8 +5,7 @@ using namespace std;
 
 const string BASE_URL = "yourUrl";
 
-extern "C"
-JNIEXPORT jstring  extern "C" jstring
+extern "C" jstring JNICALL
 Java_com_example_myproject_ext_constant_ConstApi_getEndPoint(JNIEnv *env, jobject thiz) {
 
     string s = BASE_URL;

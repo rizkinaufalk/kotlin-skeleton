@@ -1,9 +1,9 @@
-package id.co.kalacakra.bcas.app.domain
+package com.example.myproject.app.domain
 
-import id.co.kalacakra.bcas.ext.constant.NetworkCodes
-import id.co.kalacakra.bcas.ext.exeption.ForbiddenException
-import id.co.kalacakra.bcas.ext.exeption.NoNetworkException
-import id.co.kalacakra.bcas.ext.other.ErrorCodesMapper
+import com.example.myproject.ext.constant.NetworkCodes
+import com.example.myproject.ext.exception.ForbiddenException
+import com.example.myproject.ext.exception.NoNetworkException
+import com.example.myproject.ext.other.ErrorCodesMapper
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import kotlinx.coroutines.CoroutineDispatcher
@@ -79,7 +79,8 @@ suspend fun <T> safeApiCall(
                 is NullPointerException -> {
                     val code = NetworkCodes.HTTP_NO_CONTENT
                     ResultWrapper.GenericError(
-                        code = code, message = errorCodesMapper.getMessage(NetworkCodes.GENERIC_ERROR)
+                        code = code,
+                        message = errorCodesMapper.getMessage(NetworkCodes.GENERIC_ERROR)
                     )
                 }
                 else -> {

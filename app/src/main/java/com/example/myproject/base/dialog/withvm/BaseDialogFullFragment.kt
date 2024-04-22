@@ -10,11 +10,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.DialogFragment
+import com.example.myproject.R
+import com.example.myproject.base.BaseViewModel
 import com.google.android.material.snackbar.Snackbar
-import id.co.kalacakra.bcas.R
-import id.co.kalacakra.bcas.app.base.viewmodel.BaseViewModel
 import com.example.myproject.ext.listener.OnDialogDismissListener
-import id.co.kalacakra.bcas.ext.prefs.SharedPreferenceManager
 import javax.inject.Inject
 
 abstract class BaseDialogFullFragment<VB : ViewDataBinding, VM : BaseViewModel> :
@@ -26,7 +25,7 @@ abstract class BaseDialogFullFragment<VB : ViewDataBinding, VM : BaseViewModel> 
     private var dismissListener: OnDialogDismissListener? = null
 
     //
-    @Inject lateinit var prefManager: SharedPreferenceManager
+//    @Inject lateinit var prefManager: SharedPreferenceManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,8 +40,8 @@ abstract class BaseDialogFullFragment<VB : ViewDataBinding, VM : BaseViewModel> 
         super.onStart()
         viewModel.showToast.observe(
             this) { Toast.makeText(activity, it, Toast.LENGTH_LONG).show() }
-        viewModel.showSnack.observe(
-            this) { showSnackBar(it.message, it.spanned, it.color) }
+//        viewModel.showSnack.observe(
+//            this) { showSnackBar(it.message, it.spanned, it.color) }
     }
 
     override fun onCreateView(
